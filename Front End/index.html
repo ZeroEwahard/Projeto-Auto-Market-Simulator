@@ -1,0 +1,599 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="./bootstrap/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="CSS/style.css" />
+    <title>Loja Virtual</title>
+  </head>
+
+  <body>
+    <header class="fundo">
+      <section>
+        <nav class="navbar navbar-expand-md navbar-dark fundo-da-nav">
+          <div class="container">
+            <div class="titulo-principal">
+              <p class="navbar-brand" href="#" style="text-shadow: 0 0 5px">
+                AutoMarket
+              </p>
+              <img
+                class="wrench d-none"
+                src="bootstrap/bootstrap-icons-1.13.1/wrench.svg"
+              />
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#menu"
+              >
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </div>
+            <div class="collapse navbar-collapse" id="menu">
+              <ul class="navbar-nav ms-auto">
+                <li class="nav-item">
+                  <a class="nav-link" href="#titulo">Início</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#carros-destaques">Carros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#servicos">Serviços</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contato">Contato</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </nav>
+
+        <button onclick="voltaAoTopo()" id="scroll" title="Volta ao topo">
+          <img
+            src="bootstrap/bootstrap-icons-1.13.1/arrow-up-circle-fill.svg"
+            width="20"
+          />
+        </button>
+
+        
+        <button class="config" id="cruds">
+          <img
+            src="bootstrap/bootstrap-icons-1.13.1/gear-fill.svg"
+            alt="configurações CRUD"
+          />
+        </button>
+        
+        <section class="hero">
+          <img class="capa" src="./assets/CapaInicial.jpg" />
+
+          <div class="container mt-1 ms-4 d-flex container-busca">
+            <div class="mt-2">
+              <div class="mb-3 ps-3 p-1">
+                <h3 class="text-white titulo">Encontre o seu carro perfeito</h3>
+              </div>
+              <div class="card shadow p-3 mb-4 filtro">
+                <form class="bg-light p-3">
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Condição</label>
+                    <div
+                      class="btn-group w-100 focar"
+                      role="group"
+                      aria-label="Condição"
+                    >
+                      <input
+                        class="btn-check"
+                        type="radio"
+                        name="condicao"
+                        id="novo"
+                        value="novo"
+                        autocomplete="off"
+                        checked
+                      />
+                      <label class="btn btn-outline-dark" for="novo"
+                        >Novo</label
+                      >
+
+                      <input
+                        class="btn-check"
+                        type="radio"
+                        name="condicao"
+                        id="usado"
+                        value="usado"
+                        autocomplete="off"
+                      />
+                      <label class="btn btn-outline-dark" for="usado"
+                        >Usado</label
+                      >
+                    </div>
+                  </div>
+
+                  <div class="row mb-3">
+                    <div class="col-md-6">
+                      <label for="categoria" class="form-label fw-bold"
+                        >Categoria</label
+                      >
+                      <select class="form-select" id="categoria">
+                        <option selected disabled>Selecione</option>
+                        <option>Padrão</option>
+                        <option>Econômico</option>
+                        <option>Compacto</option>
+                        <option>Intermediario</option>
+                        <option>Luxo</option>
+                        <option>Outros</option>
+                      </select>
+                    </div>
+
+                    <div class="col-md-6">
+                      <label class="form-label fw-bold" for="marca"
+                        >Marca</label
+                      >
+                      <select class="form-select" id="marca">
+                        <option selected disabled>Selecione</option>
+                        <option>Aston Martin</option>
+                        <option>BMW</option>
+                        <option>Chevrolet</option>
+                        <option>Fiat</option>
+                        <option>Honda</option>
+                        <option>Toyota</option>
+                        <option>Outras</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="mb-3">
+                    <label class="form-label fw-bold">Preços:</label>
+                    <div class="form-check">
+                      <input
+                        class=""
+                        type="range"
+                        id="preco"
+                        min="10000"
+                        max="5000000"
+                      />
+                      <span id="valor">10.000 R$</span>
+                      <label class="form-check-label d-flex"
+                        >Carros de 10.000 R$ até 5.000.000 R$</label
+                      >
+                    </div>
+                  </div>
+
+                  <button
+                    onclick="opcoes()"
+                    id="buscaCarros"
+                    class="form-control btn btn-primary"
+                    type="button"
+                  >
+                    <img
+                      class="me-1 mb-1"
+                      src="bootstrap/bootstrap-icons-1.13.1/search.svg"
+                    />Buscar
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </section>
+      </section>
+    </header>
+
+    <main>
+      <section class="margem">
+        <div class="container mt-5">
+          <div class="row align-items-baseline mb-4">
+            <div class="col-md-10 coluna">
+              <h3 class="text-black titulo">Busque pelo um Tipo</h3>
+            </div>
+            <div class="col-md-2">
+              <p class="text-center"><a href="#">Ver todos</a></p>
+            </div>
+          </div>
+          <div class="navbar-expand-md">
+            <div class="container-fluid">
+              <ul
+                class="navbar-nav justify-content-evenly d-flex flex-wrap gap-1"
+              >
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary mb-1" href="#">Hatch</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary mb-1" href="#">Sedan</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary mb-1" href="#">Esportivo</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary mb-1" href="#">SUV</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary mb-1" href="#">Picape</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary mb-1" href="#">Off-road</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-primary mb-1" href="#">Luxo</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="margem">
+        <div class="container mt-5">
+          <div class="row align-items-baseline mb-4">
+            <div class="col-md-10 coluna">
+              <h3 class="text-black titulo">Marcas Tradicionais</h3>
+            </div>
+            <div class="col-md-2">
+              <p class="text-center"><a href="">Ver mais marcas</a></p>
+            </div>
+          </div>
+          <div class="navbar-expand-md">
+            <div class="container-fluid">
+              <ul
+                class="navbar-nav justify-content-evenly d-flex flex-wrap gap-1"
+              >
+                <li class="nav-item">
+                  <a class="btn btn-outline-dark mb-1" href="#">Ferrari</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-dark mb-1" href="#">BMW</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-dark mb-1" href="#">FIAT</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-dark mb-1" href="#">Aston Martin</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-dark mb-1" href="#">Chevrolet</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-dark mb-1" href="#">Honda</a>
+                </li>
+                <li class="nav-item">
+                  <a class="btn btn-outline-dark mb-1" href="#">Toyota</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-light">
+        <div class="container carros-destaques-fundo">
+          <div class="row align-items-baseline mb-2">
+            <div class="col-md-10 mt-4 coluna">
+              <h3 class="text-black titulo">Destaques</h3>
+            </div>
+            <div class="col-md-2">
+              <p class="text-center"><a href="">Ver todos</a></p>
+            </div>
+
+            <div class="border-bottom mt-3">
+              <a class="btn porCima" href="#">No estoque</a>
+              <a class="btn porCima" href="#">Novos</a>
+              <a class="btn porCima" href="#">Usados</a>
+            </div>
+
+            <div class="row g-2 align-items-center mt-4">
+              <div class="col-md-6">
+                <input
+                  class="form-control pesquisa"
+                  type="text"
+                  id="busca"
+                  placeholder="Buscar carro..."
+                />
+              </div>
+              <div class="col-md-3">
+                <select id="filtroTipo" class="form-select">
+                  <option value="todos" selected>Tipo: Todos</option>
+                  <option value="hatch">Hatch</option>
+                  <option value="sedan">Sedan</option>
+                  <option value="esportivo">Esportivo</option>
+                  <option value="suv">SUV</option>
+                  <option value="picape">Picape</option>
+                  <option value="offroad">Off-road</option>
+                  <option value="luxo">Luxo</option>
+                </select>
+              </div>
+              <div class="col-md-3">
+                <select id="ordenarPor" class="form-select">
+                  <option value="padrao" selected>Ordenar: Padrão</option>
+                  <option value="preco-asc">Preço ↓</option>
+                  <option value="preco-desc">Preço ↑</option>
+                  <option value="km-asc">Km ↓</option>
+                  <option value="km-desc">Km ↑</option>
+                </select>
+              </div>
+            </div>
+            <p
+              class="naoExibirAinda text-black text-center mt-3"
+              id="erroNaoEncontrado"
+              style="display: none"
+            >
+              Não foi possível encontrar esse carro.
+            </p>
+
+            <div class="row mt-4 carros-exibicao animar" id="carros-destaques">
+              <div
+                class="col-md-4 carro mb-4"
+                data-condicao="usado"
+                data-tipo="esportivo luxo"
+                data-preco="950000"
+                data-km="5000"
+              >
+                <div class="card h-100">
+                  <div class="position-relative overflow-hidden aj">
+                    <img
+                      class="card-img-top img-fluid expandi foto"
+                      src="./assets/SuperleggeraSemFundo.png"
+                      alt="Aston Martin DBS Superleggera Volante."
+                    />
+                    <span
+                      class="badge bg-success position-absolute top-0 start-0 m-2"
+                      >Melhor preço</span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">
+                      Aston Martin - DBS Superleggera Volante
+                    </h5>
+                    <ul class="list-unstyled mb-3">
+                      <li><strong>Kilometragem:</strong> 5.000 Km</li>
+                      <li><strong>Tipo de combustível:</strong> Gasolina</li>
+                      <li><strong>Transmissão:</strong> Automático</li>
+                      <li class="valor-carro">
+                        <strong>Preço:</strong> 950.000 R$
+                      </li>
+                    </ul>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a class="btn-primary" href="">Ver mais detalhes</a>
+                      </div>
+                      <div class="col-md-6">
+                        <button
+                          class="btn btn-dark"
+                          onclick="simularCompra(this)"
+                        >
+                          Simular Compra
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-4 carro mb-4"
+                data-condicao="usado"
+                data-tipo="hatch"
+                data-preco="65000"
+                data-km="2500"
+              >
+                <div class="card h-100">
+                  <div class="position-relative overflow-hidden aj">
+                    <img
+                      class="card-img-top img-fluid expandi foto"
+                      src="./assets/Fiat Mobi.webp"
+                      alt="Fiat Mobi Trekking"
+                    />
+                    <span
+                      class="badge bg-primary position-absolute top-0 start-0 m-2"
+                      >Baixa quilometragem</span
+                    >
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">
+                      FIAT - Fiat Mobi Trekking
+                    </h5>
+                    <ul class="list-unstyled mb-3">
+                      <li><strong>Kilometragem:</strong> 2.500 Km</li>
+                      <li><strong>Tipo de combustível:</strong> Flex</li>
+                      <li><strong>Transmissão:</strong> Manual</li>
+                      <li class="valor-carro">
+                        <strong>Preço:</strong> 65.000 R$
+                      </li>
+                    </ul>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a class="btn-primary" href="">Ver mais detalhes</a>
+                      </div>
+                      <div class="col-md-6">
+                        <button
+                          class="btn btn-dark"
+                          onclick="simularCompra(this)"
+                        >
+                          Simular Compra
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div
+                class="col-md-4 carro mb-4"
+                data-condicao="novo"
+                data-tipo="suv luxo"
+                data-preco="1000000"
+                data-km="0"
+              >
+                <div class="card h-100">
+                  <div class="position-relative overflow-hidden aj">
+                    <img
+                      class="card-img-top img-fluid expandi foto"
+                      src="./assets/BMWX7.webp"
+                      alt="BMW X7"
+                    />
+                  </div>
+                  <div class="card-body">
+                    <h5 class="card-title fw-bold">BMW X7</h5>
+                    <ul class="list-unstyled mb-3">
+                      <li><strong>Kilometragem:</strong> 0 Km</li>
+                      <li><strong>Tipo de combustível:</strong> Hybrid</li>
+                      <li><strong>Transmissão:</strong> Automático</li>
+                      <li class="valor-carro">
+                        <strong>Preço:</strong> 1.000.000 R$
+                      </li>
+                    </ul>
+                    <div class="row">
+                      <div class="col-md-6">
+                        <a class="btn-primary" href="">Ver mais detalhes</a>
+                      </div>
+                      <div class="col-md-6">
+                        <button
+                          class="btn btn-dark"
+                          onclick="simularCompra(this)"
+                        >
+                          Simular Compra
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="bg-light py-5 mt-5 secao">
+        <div class="container text-center" id="servicos">
+          <h3 class="mb-5 titulo">Por que escolher nossa loja?</h3>
+          <div class="row mt-4">
+            <div class="col-md-3">
+              <img src="bootstrap/bootstrap-icons-1.13.1/cart4.svg" alt="" />
+              <h5 class="fw-bold">Financiamento Fácil</h5>
+              <p>Parcele seu carro em até 60x com aprovação rápida.</p>
+            </div>
+            <div class="col-md-3">
+              <img src="bootstrap/bootstrap-icons-1.13.1/tags.svg" alt="" />
+              <h5 class="fw-bold">Transparência</h5>
+              <p>Sem taxas escondidas, todos os preços claros e atualizados.</p>
+            </div>
+            <div class="col-md-3">
+              <img src="bootstrap/bootstrap-icons-1.13.1/search.svg" alt="" />
+              <h5 class="fw-bold">Carros Inspecionados</h5>
+              <p>
+                Todos os veículos passam por vistoria completa antes da venda.
+              </p>
+            </div>
+            <div class="col-md-3">
+              <img
+                src="bootstrap/bootstrap-icons-1.13.1/telephone.svg"
+                alt=""
+              />
+              <h5 class="fw-bold">Atendimento 24h</h5>
+              <p>Equipe disponível para tirar dúvidas e oferecer suporte.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="bg-dark text-white py-3 mt-5 text-center" id="contato">
+      <div class="mb-2">
+        <p class="text">Entrar em contato</p>
+        <form class="d-inline">
+          <input
+            class="form-text form-control-sm"
+            type="email"
+            placeholder="Seu email"
+          />
+          <button class="btn btn-sm btn-secondary" type="submit">Enviar</button>
+        </form>
+      </div>
+      <p>© 2025 AutoMarket - Todos os direitos reservados.</p>
+      <p>
+        <a href="#" class="text-white">Política de Privacidade</a> |
+        <a href="#" class="text-white">Contato</a>
+      </p>
+    </footer>
+
+    <div class="modal fade" id="modalSimulacao" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Simular Compra</h5>
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="mb-3">
+              <label class="form-label">Valor da entrada</label>
+              <input
+                class="form-control"
+                type="number"
+                id="entradaInput"
+                min="0"
+                step="0.01"
+              />
+              <label class="form-label">Número de parcelas</label>
+              <input
+                class="form-control"
+                type="number"
+                id="parcelasInput"
+                min="1"
+                max="60"
+                step="1"
+              />
+            </div>
+          </div>
+
+          <div class="modal-footer">
+            <button class="btn btn-secondary" data-bs-dismiss="modal">
+              Cancelar
+            </button>
+            <button class="btn btn-dark" onclick="simulacaoCompra()">
+              Calcular
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="modalCrud" tabindex="-1">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Selecione um desses métodos</h5>
+            <button
+              class="btn-close"
+              type="button"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+
+          <div class="modal-body">
+            <div class="mb-3 text-center">
+              <button class="btn btn-success" id="modal-post">
+                Cadastra carro
+              </button>
+              <br />
+              <button class="btn btn-warning mt-2" id="modal-patch">
+                Atualize as informações 
+              </button>
+              <br />
+              <button class="btn btn-danger mt-2" id="modal-delete">
+                Excluir o carro
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./bootstrap/bootstrap-5.3.7-dist/bootstrap-5.3.7-dist/js/bootstrap.bundle.min.js"></script>
+    <script type="module" src="script/main/app.js"></script>
+  </body>
+</html>
