@@ -1,5 +1,5 @@
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
@@ -321,6 +321,90 @@ footer {
   background: linear-gradient(#0b0c10 0%, #1f2833 100%);
 }
 
+.footer-premium {
+  background: #0a0a0a;
+  color: #fff;
+  padding: 70px 8% 20px;
+  border-top: 1px solid #222;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 50px;
+}
+
+.footer-brand {
+  max-width: 320px;
+}
+
+.footer-brand h2 {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 15px;
+  letter-spacing: 2px;
+}
+
+.footer-brand p {
+  color: #aaa;
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.footer-links,
+.footer-social {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-links h4,
+.footer-social h4 {
+  font-size: 15px;
+  margin-bottom: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-links a,
+.footer-social a {
+  color: #bdbdbd;
+  text-decoration: none;
+  margin-bottom: 12px;
+  transition: 0.3s ease;
+  font-size: 14px;
+}
+
+.footer-links a:hover,
+.footer-social a:hover {
+  color: #fff;
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  border-top: 1px solid #1f1f1f;
+  margin-top: 50px;
+  padding-top: 20px;
+  text-align: center;
+}
+
+.footer-bottom p {
+  color: #777;
+  font-size: 13px;
+}
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    gap: 35px;
+  }
+
+  .footer-brand {
+    max-width: 100%;
+  }
+}
+
 @media (max-width: 1200px) {
   .titulo {
     font-size: 1.8rem;
@@ -328,14 +412,6 @@ footer {
 
   .card-body ul {
     font-size: 0.95rem;
-  }
-
-  .ajuste1_1 {
-    padding-bottom: 7.8%;
-  }
-
-  .ajuste2_2 {
-    padding-bottom: 7.7%;
   }
 }
 
@@ -350,18 +426,6 @@ footer {
 
   #carros-exibicao .carro {
     margin-bottom: 30px;
-  }
-
-  .ajuste1 {
-    margin-top: 34.5%;
-  }
-
-  .ajuste2 {
-    margin-top: 29%;
-  }
-
-  .ajusteEspecificado {
-    padding-bottom: 8.4%;
   }
 
   img.capa {
@@ -428,15 +492,6 @@ footer {
     flex: 0 0 50%;
     max-width: 50%;
     margin-bottom: 30px;
-  }
-
-  .ajuste1_1 {
-    padding-top: 15%;
-    padding-bottom: 20%;
-  }
-
-  .ajuste2_2 {
-    padding-bottom: 16.2%;
   }
 
   section .coluna {

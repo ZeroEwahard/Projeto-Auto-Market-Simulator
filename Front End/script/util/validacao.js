@@ -62,7 +62,7 @@ export function validador() {
   }
 
   if (entrada !== precoCarro && parcelas === 1) {
-    alert("Para pagamento à vista, o valor deve ser iqual ao preço total do carro")
+    alert("Para pagamento à vista, o valor deve ser igual ao preço total do carro")
     return false
   }
 

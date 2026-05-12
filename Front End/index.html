@@ -59,14 +59,13 @@
           />
         </button>
 
-        
         <button class="config" id="cruds">
           <img
             src="bootstrap/bootstrap-icons-1.13.1/gear-fill.svg"
             alt="configurações CRUD"
           />
         </button>
-        
+
         <section class="hero">
           <img class="capa" src="./assets/CapaInicial.jpg" />
 
@@ -320,168 +319,42 @@
               Não foi possível encontrar esse carro.
             </p>
 
-            <div class="row mt-4 carros-exibicao animar" id="carros-destaques">
-              <div
-                class="col-md-4 carro mb-4"
-                data-condicao="usado"
-                data-tipo="esportivo luxo"
-                data-preco="950000"
-                data-km="5000"
-              >
-                <div class="card h-100">
-                  <div class="position-relative overflow-hidden aj">
-                    <img
-                      class="card-img-top img-fluid expandi foto"
-                      src="./assets/SuperleggeraSemFundo.png"
-                      alt="Aston Martin DBS Superleggera Volante."
-                    />
-                    <span
-                      class="badge bg-success position-absolute top-0 start-0 m-2"
-                      >Melhor preço</span
-                    >
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold">
-                      Aston Martin - DBS Superleggera Volante
-                    </h5>
-                    <ul class="list-unstyled mb-3">
-                      <li><strong>Kilometragem:</strong> 5.000 Km</li>
-                      <li><strong>Tipo de combustível:</strong> Gasolina</li>
-                      <li><strong>Transmissão:</strong> Automático</li>
-                      <li class="valor-carro">
-                        <strong>Preço:</strong> 950.000 R$
-                      </li>
-                    </ul>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <a class="btn-primary" href="">Ver mais detalhes</a>
-                      </div>
-                      <div class="col-md-6">
-                        <button
-                          class="btn btn-dark"
-                          onclick="simularCompra(this)"
-                        >
-                          Simular Compra
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="col-md-4 carro mb-4"
-                data-condicao="usado"
-                data-tipo="hatch"
-                data-preco="65000"
-                data-km="2500"
-              >
-                <div class="card h-100">
-                  <div class="position-relative overflow-hidden aj">
-                    <img
-                      class="card-img-top img-fluid expandi foto"
-                      src="./assets/Fiat Mobi.webp"
-                      alt="Fiat Mobi Trekking"
-                    />
-                    <span
-                      class="badge bg-primary position-absolute top-0 start-0 m-2"
-                      >Baixa quilometragem</span
-                    >
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold">
-                      FIAT - Fiat Mobi Trekking
-                    </h5>
-                    <ul class="list-unstyled mb-3">
-                      <li><strong>Kilometragem:</strong> 2.500 Km</li>
-                      <li><strong>Tipo de combustível:</strong> Flex</li>
-                      <li><strong>Transmissão:</strong> Manual</li>
-                      <li class="valor-carro">
-                        <strong>Preço:</strong> 65.000 R$
-                      </li>
-                    </ul>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <a class="btn-primary" href="">Ver mais detalhes</a>
-                      </div>
-                      <div class="col-md-6">
-                        <button
-                          class="btn btn-dark"
-                          onclick="simularCompra(this)"
-                        >
-                          Simular Compra
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                class="col-md-4 carro mb-4"
-                data-condicao="novo"
-                data-tipo="suv luxo"
-                data-preco="1000000"
-                data-km="0"
-              >
-                <div class="card h-100">
-                  <div class="position-relative overflow-hidden aj">
-                    <img
-                      class="card-img-top img-fluid expandi foto"
-                      src="./assets/BMWX7.webp"
-                      alt="BMW X7"
-                    />
-                  </div>
-                  <div class="card-body">
-                    <h5 class="card-title fw-bold">BMW X7</h5>
-                    <ul class="list-unstyled mb-3">
-                      <li><strong>Kilometragem:</strong> 0 Km</li>
-                      <li><strong>Tipo de combustível:</strong> Hybrid</li>
-                      <li><strong>Transmissão:</strong> Automático</li>
-                      <li class="valor-carro">
-                        <strong>Preço:</strong> 1.000.000 R$
-                      </li>
-                    </ul>
-                    <div class="row">
-                      <div class="col-md-6">
-                        <a class="btn-primary" href="">Ver mais detalhes</a>
-                      </div>
-                      <div class="col-md-6">
-                        <button
-                          class="btn btn-dark"
-                          onclick="simularCompra(this)"
-                        >
-                          Simular Compra
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <div
+              class="row mt-4 carros-exibicao animar"
+              id="carros-destaques"
+            ></div>
           </div>
         </div>
       </section>
 
       <section class="bg-light py-5 mt-5 secao">
         <div class="container text-center" id="servicos">
-          <h3 class="mb-5 titulo">Por que escolher nossa loja?</h3>
+          <h3 class="mb-5 titulo">
+            Simule seu próximo carro com mais segurança
+          </h3>
           <div class="row mt-4">
             <div class="col-md-3">
               <img src="bootstrap/bootstrap-icons-1.13.1/cart4.svg" alt="" />
-              <h5 class="fw-bold">Financiamento Fácil</h5>
-              <p>Parcele seu carro em até 60x com aprovação rápida.</p>
+              <h5 class="fw-bold">Simulação Inteligente</h5>
+              <p>
+                Descubra parcelas, entrada e condições em segundos de forma
+                simples.
+              </p>
             </div>
             <div class="col-md-3">
               <img src="bootstrap/bootstrap-icons-1.13.1/tags.svg" alt="" />
-              <h5 class="fw-bold">Transparência</h5>
-              <p>Sem taxas escondidas, todos os preços claros e atualizados.</p>
+              <h5 class="fw-bold">Taxas Transparentes</h5>
+              <p>
+                Visualize todas as condições do financiamento sem surpresas no
+                cálculo.
+              </p>
             </div>
             <div class="col-md-3">
               <img src="bootstrap/bootstrap-icons-1.13.1/search.svg" alt="" />
-              <h5 class="fw-bold">Carros Inspecionados</h5>
+              <h5 class="fw-bold">Compare Modelos</h5>
               <p>
-                Todos os veículos passam por vistoria completa antes da venda.
+                Analise diferentes veículos e encontre a melhor opção para seu
+                perfil.
               </p>
             </div>
             <div class="col-md-3">
@@ -497,23 +370,75 @@
       </section>
     </main>
 
-    <footer class="bg-dark text-white py-3 mt-5 text-center" id="contato">
-      <div class="mb-2">
-        <p class="text">Entrar em contato</p>
-        <form class="d-inline">
-          <input
-            class="form-text form-control-sm"
-            type="email"
-            placeholder="Seu email"
-          />
-          <button class="btn btn-sm btn-secondary" type="submit">Enviar</button>
-        </form>
+    <footer class="footer-premium" id="contato">
+      <div class="footer-container">
+        <!-- Logo / Marca -->
+        <div class="footer-brand">
+          <h2 class="titulo">AutoMarket</h2>
+          <p>
+            Performance, sofisticação e tecnologia automotiva em um único lugar.
+          </p>
+        </div>
+
+        <!-- Navegação -->
+        <div class="footer-links">
+          <h4>Navegação</h4>
+
+          <a href="#menu">Início</a>
+          <a href="#carros-destaques">Modelos</a>
+          <a href="#contato">Contato</a>
+          <a href="#" id="taxas">Sobre as Taxas</a>
+        </div>
+
+        <!-- Institucional -->
+        <div class="footer-links">
+          <h4>Institucional</h4>
+
+          <a href="#footer-premium">Política de Privacidade</a>
+          <a href="#footer-premium">Termos de Uso</a>
+          <a href="#footer-premium">Financiamento</a>
+          <a href="#footer-premium">Suporte</a>
+        </div>
+
+        <!-- Redes -->
+        <div class="footer-social">
+          <h4>Redes Sociais</h4>
+
+          <div>
+            <img
+              class="bg-light"
+              src="bootstrap/bootstrap-icons-1.13.1/instagram.svg"
+            />
+            <a href="#footer-premium">Instagram</a>
+          </div>
+          <div>
+            <img
+              class="bg-light"
+              src="bootstrap/bootstrap-icons-1.13.1/facebook.svg"
+            />
+            <a href="#footer-premium">Facebook</a>
+          </div>
+          <div>
+            <img
+              class="bg-light"
+              src="bootstrap/bootstrap-icons-1.13.1/youtube.svg"
+            />
+            <a href="#footer-premium">YouTube</a>
+          </div>
+          <div>
+            <img
+              class="bg-light"
+              src="bootstrap/bootstrap-icons-1.13.1/linkedin.svg"
+            />
+            <a href="#footer-premium">LinkedIn</a>
+          </div>
+        </div>
       </div>
-      <p>© 2025 AutoMarket - Todos os direitos reservados.</p>
-      <p>
-        <a href="#" class="text-white">Política de Privacidade</a> |
-        <a href="#" class="text-white">Contato</a>
-      </p>
+
+      <!-- Linha inferior -->
+      <div class="footer-bottom">
+        <p>© 2025 AutoMarket — Todos os direitos reservados.</p>
+      </div>
     </footer>
 
     <div class="modal fade" id="modalSimulacao" tabindex="-1">
@@ -581,7 +506,7 @@
               </button>
               <br />
               <button class="btn btn-warning mt-2" id="modal-patch">
-                Atualize as informações 
+                Atualize as informações
               </button>
               <br />
               <button class="btn btn-danger mt-2" id="modal-delete">

@@ -49,7 +49,6 @@ export function exibiCarros(lista, container) {
 
     card.addEventListener("click", () => {
       window.carroSelecionado = card
-      console.log("Carro selecionando:", lista)
     })
 
     container.appendChild(card)
