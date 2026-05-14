@@ -1,7 +1,41 @@
 # 🚗 AutoMarket
 
-O **AutoMarket** é uma aplicação web completa para visualização, gerenciamento e simulação de financiamento de veículos. O projeto oferece um catálogo dinâmico de carros, busca avançada
-e uma ferramenta integrada para calcular parcelamentos utilizando o Sistema de Amortização Francês (Tabela Price).
+O **AutoMarket** é uma aplicação web para visualização, gerenciamento e simulação de financiamento de veículos. O projeto contém um back-end em Java/Spring Boot e um front-end dinâmico em HTML/CSS/JavaScript e Bootstrap.
+
+## 📄 Sumário
+- Visão geral
+- Tecnologias
+- Estrutura do Projeto
+- Como rodar (Back End)
+- Como rodar (Front End)
+- Configurações e variáveis de ambiente
+- Endpoints principais
+- Testes
+- Observações
+
+## Visão Geral
+O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, ficha técnica por veículo e um simulador de financiamento (método Price). O sistema utiliza PostgreSQL no back-end e uma UI em JavaScript no front-end.
+
+## 🛠️ Tecnologia
+**Front-End:**
+* HTML
+* CSS
+* JavaScript (Manipulação de DOM, consumo da API e redenrização dinâmica)
+* Bootstrap 5
+
+* **Back-End & Banco de Dados:**
+* Java 21
+* Spring Boot 4
+* Spring Data JPA
+* PostgreSQL (Armazenamento e persistência dos dados)
+* Swagger (Documentação da API e interface do CRUD)
+
+## Estrutura principal
+* Back End/: código Spring Boot (mvnw, pom.xml)
+* Front End/: arquivos (index.html, script/, css/, assets/)
+
+## Como rodar - Back End
+Pré-requisitos:
 
 ## 🚀 Funcionalidades
 
@@ -23,15 +57,3 @@ e uma ferramenta integrada para calcular parcelamentos utilizando o Sistema de A
 ### ⚙️ Administração e Usabilidade
 * **Painel de Controle (CRUD):** Através do botão de configuração ⚙️, o usuário abre um modal que o redireciona para a interface do **Swagger**. Lá, é possível realizar todas as operações de CRUD (Criar, Ler, Atualizar e Deletar) dos veículos diretamente na API.
 * **Scroll-to-Top Dinâmico:** Botão flutuante que permite ao usuário retornar instantaneamente ao topo da página, melhorando a navegação.
-
-## 🛠️ Tecnologia Utilizadas
-**Front-End:**
-* HTML5
-* CSS3
-* JavaScript (Manipulação de DOM, consumo da API e redenrização dinâmica)
-* Bootstrap (Estilização responsiva, Modais e Cards)
-
-**Back-End & Banco de Dados:**
-* Java (Spring Boot, Lógica de negócios, cálculo financeiro e endpoints)
-* PostgreSQL (Armazenamento e persistência dos dados)
-* Swagger (Documentação da API e interface do CRUD)
