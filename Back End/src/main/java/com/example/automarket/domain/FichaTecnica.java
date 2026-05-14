@@ -1,6 +1,5 @@
 package com.example.automarket.domain;
 
-import io.swagger.v3.oas.annotations.media.Schema;
 import jakarta.persistence.Embeddable;
 import lombok.AllArgsConstructor;
 import lombok.Getter;

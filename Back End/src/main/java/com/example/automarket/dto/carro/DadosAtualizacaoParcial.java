@@ -1,7 +1,6 @@
 package com.example.automarket.dto.carro;
 
 import com.example.automarket.domain.Condicao;
-import com.example.automarket.domain.FichaTecnica;
 import com.example.automarket.service.CarroService;
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotBlank;
