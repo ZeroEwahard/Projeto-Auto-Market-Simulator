@@ -23,7 +23,7 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
 * JavaScript (Manipulação de DOM, consumo da API e redenrização dinâmica)
 * Bootstrap 5
 
-* **Back-End & Banco de Dados:**
+**Back-End & Banco de Dados:**
 * Java 21
 * Spring Boot 4
 * Spring Data JPA
