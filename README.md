@@ -35,7 +35,15 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
 * Front End/: arquivos (index.html, script/, css/, assets/)
 
 ## Como rodar - Back End
-Pré-requisitos:
+Pré-requisitos: JDK 21 instalado e um banco PostgreSQL.
+### Configurar variáveis de ambiente (exemplo PowerShell):
+```
+$env:DB_USER = "postgres"
+$env:DB_PASSWORD = "sua_senha"
+$env:DB_HOST = "localhost:5432" # opcional - padrão é localhost:5432
+cd "Back End"
+.\mvnw.cmd spring-boot:run
+```
 
 ## 🚀 Funcionalidades
 
