@@ -72,6 +72,15 @@ cd "Front End"
 python -m http.server 5500
 # então abra http://localhost:5500/index.html
 ```
+O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrão `http://localhost:8080`). Atualize quando o back-end estiver em outro host/porta.
+
+## Configurações e variáveis de ambiente
+* `DB_HOST` (opcional): host e porta do PostgreSQL (padrão: `localhost:5432`).
+* `DB_USER`: usuário do banco.
+* `DB_PASSWORD`: senha do banco.
+* `Back End/src/main/resources/application.properties` contém configurações adicionais (como `carros.max` e `simulador.taxa-juros`).
+
+## Endpoints principais:
 
 ## 🚀 Funcionalidades
 
