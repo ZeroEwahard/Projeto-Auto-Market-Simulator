@@ -1,6 +1,6 @@
 # 🚗 AutoMarket
 
-O **AutoMarket** é uma aplicação web para visualização, gerenciamento e simulação de financiamento de veículos. O projeto contém um back-end em Java/Spring Boot e um front-end dinâmico em HTML/CSS/JavaScript e Bootstrap.
+O **AutoMarket** é uma aplicação web para visualização, gerenciamento e simulação de financiamento de veículos. O projeto contém um back-end em Java/Spring Boot e um front-end estático em HTML/CSS/JavaScript e Bootstrap.
 
 ## 📄 Sumário
 - Visão geral
@@ -43,6 +43,34 @@ $env:DB_PASSWORD = "sua_senha"
 $env:DB_HOST = "localhost:5432" # opcional - padrão é localhost:5432
 cd "Back End"
 .\mvnw.cmd spring-boot:run
+```
+ou (Linux/macOS):
+```
+export DB_USER=postgres
+export DB_PASSWORD=sua_senha
+export DB_HOST=localhost:5432
+cd "Back End"
+./mvnw spring-boot:run
+```
+Build e execução do JAR:
+```
+cd "Back End"
+./mvnw package
+java -jar target/*.jar
+```
+Pontos úteis:
+- Swagger UI: http://localhost:8080/swagger-ui
+- OpenAPI: http://localhost:8080/v3/api-docs
+
+## Como rodar - Front End
+O front-end é servido como arquivos estáticos (HTML/CSS/JS) - ou seja, o serivdor entrega os artefatos prontos sem gerar HTML no servidor a cada requisição. Porém, o comportamento da interface é dinâmico: o JavaScript no cliente consome a API do back-end (variável `API_URL` em Front End/script/main/config.js) e gera/atualiza o conteúdo no navegador (Client-Side Rendering - CSR). Em resumo: arquivos estáticos + renderização dinâmica no cliente via API.
+
+Para desenvolvimento abra `Front End/index.html` no navegador ou sirva a pasta com um servidor estático:
+```
+cd "Front End"
+# Exemplo Python
+python -m http.server 5500
+# então abra http://localhost:5500/index.html
 ```
 
 ## 🚀 Funcionalidades
