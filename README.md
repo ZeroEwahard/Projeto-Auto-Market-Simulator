@@ -81,6 +81,28 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
 * `Back End/src/main/resources/application.properties` contém configurações adicionais (como `carros.max` e `simulador.taxa-juros`).
 
 ## Endpoints principais:
+- `GET /carros` - lista de todos os carros (padrão Spring Data `Page` em JSON).
+- `POST /carros` - cadastra um novo carro. Exemplo:
+```json
+{
+"marca": "Fiat",
+"modelo": "Uno",
+"tipo": "Hatch",
+"ano": 2019,
+"preco": 45000.00,
+"condicao": "USADO",
+"imagem": "nome_da_imagem.jpg",
+"fichaTecnica": {
+  "km": 50000,
+  "combustivel": "Flex",
+  "transmissao": "Manual",
+  "motor": "1.0",
+  "potencia": 75,
+  "torque": 9.0,
+  "consumo": 12.0,
+ }
+}
+```
 
 ## 🚀 Funcionalidades
 
