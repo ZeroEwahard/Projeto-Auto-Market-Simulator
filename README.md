@@ -103,6 +103,8 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
  }
 }
 ```
+- `PUT /carros/{id}` - atualiza um carro específico.
+- `PATCH /carros/{id}` - atualização parcial das informações de um carro específico (ex: preço, condicao, imagem, km).
 
 ## 🚀 Funcionalidades
 
