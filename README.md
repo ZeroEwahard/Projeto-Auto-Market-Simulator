@@ -105,6 +105,27 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
 ```
 - `PUT /carros/{id}` - atualiza um carro específico.
 - `PATCH /carros/{id}` - atualização parcial das informações de um carro específico (ex: preço, condicao, imagem, km).
+- `DELETE /carros/{id}` - remove um carro.
+- `POST /compras` - simula financiamento. Exemplo:
+  ```json
+  {
+    "carroId": 1,
+    "entrada": 5000.00,
+    "parcelas": 24
+  }
+  ```
+
+## Teste
+No back-end execute:
+```
+cd "Back End"
+.\mvnw.cmd test
+```
+
+## Observações
+- O `pom.xml` define `java.version=21`.
+- `spring.jpa.hibernate.ddl-auto=update` cria/atualiza as tabelas automaticamente em desenvolvimento.
+- Propriedades úteis: `carros.max` (limite de cadastro) e `simulador.taxa-juros`.
 
 ## 🚀 Funcionalidades
 
@@ -126,3 +147,6 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
 ### ⚙️ Administração e Usabilidade
 * **Painel de Controle (CRUD):** Através do botão de configuração ⚙️, o usuário abre um modal que o redireciona para a interface do **Swagger**. Lá, é possível realizar todas as operações de CRUD (Criar, Ler, Atualizar e Deletar) dos veículos diretamente na API.
 * **Scroll-to-Top Dinâmico:** Botão flutuante que permite ao usuário retornar instantaneamente ao topo da página, melhorando a navegação.
+
+## Contribuição
+Abra issues ou envie pull requests com melhorias e correções.
