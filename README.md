@@ -61,6 +61,14 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
 * PostgreSQL (Armazenamento e persistência dos dados)
 * Swagger (Documentação da API e interface do CRUD)
 
+## 🧠 Destaques Técnicos
+- Arquitetura REST
+- Consumo de API via Fetch API
+- Renderização dinâmica no front-end
+- Persistência com JPA/Hibernate
+- Simulação financeira usando Tabela Price
+- CRUD documentando com Swagger
+
 ## 📁 Estrutura principal
 ```bash
 AutoMarket/
@@ -128,7 +136,6 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
 * `Back End/src/main/resources/application.properties` contém configurações adicionais (como `carros.max` e `simulador.taxa-juros`).
 
 ## Endpoints principais:
-- `GET /carros` - lista de todos os carros (padrão Spring Data `Page` em JSON).
 - `POST /carros` - cadastra um novo carro. Exemplo:
 ```json
 {
@@ -150,24 +157,15 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
  }
 }
 ```
-- `PUT /carros/{id}` - atualiza um carro específico.
-- `PATCH /carros/{id}` - atualização parcial das informações de um carro específico (ex: preço, condicao, imagem, km).
-- `DELETE /carros/{id}` - remove um carro.
+- `GET /carros` - lista de todos os carros
+- `PUT /carros/{id}` - atualiza um carro específico
+- `PATCH /carros/{id}` - atualização parcial das informações de um carro específico
+- `DELETE /carros/{id}` - remove um carro
 - `POST /compras` - simula financiamento. Exemplo:
-  ```json
-  {
-    "carroId": 1,
-    "entrada": 5000.00,
-    "parcelas": 24
-  }
-  ```
 
-## Teste
-No back-end execute:
-```
-cd "Back End"
-.\mvnw.cmd test
-```
+![Java](https://img.shields.io/badge/Java-21-orange)
+![Spring](https://img.shields.io/badge/Spring_Boot-4-green)
+![PostgreSQL](https://img.shields.io/badge/PostgreSQL-blue)
 
 ## Observações
 - O `pom.xml` define `java.version=21`.
