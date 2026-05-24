@@ -57,10 +57,10 @@ public class TratarErros {
         logger.error("Unhandled exception caught: {}", ex.getMessage(), ex);
 
         ApiError error = new ApiError(HttpStatus.INTERNAL_SERVER_ERROR.value(),
-                "Internal Server Error",
-                "Erro Inesperado no servidor",
-                request.getRequestURI(),
-                LocalDateTime.now());
+            "Internal Server Error",
+            "Erro Inesperado no servidor",
+            request.getRequestURI(),
+            LocalDateTime.now());
 
         return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body(error);
     }

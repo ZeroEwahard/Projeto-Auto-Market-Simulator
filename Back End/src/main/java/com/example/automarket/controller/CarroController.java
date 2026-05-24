@@ -3,6 +3,7 @@ package com.example.automarket.controller;
 import com.example.automarket.dto.carro.*;
 import com.example.automarket.service.CarroService;
 import jakarta.validation.Valid;
+import org.springdoc.core.annotations.ParameterObject;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.http.ResponseEntity;
@@ -28,9 +29,12 @@ public class CarroController {
     }
 
     @GetMapping
-    public ResponseEntity<Page<DadosListagemDeCarro>> listar(Pageable pageable) {
-        return ResponseEntity.ok(carroService.listar(pageable));
-    }
+    public ResponseEntity<Page<DadosListagemDeCarro>> listar(
+        @ParameterObject
+        Pageable pageable
+) {
+    return ResponseEntity.ok(carroService.listar(pageable));
+}
 
     @DeleteMapping("/{id}")
     public ResponseEntity<DadosDetalhadosCarros> deletar(@PathVariable Long id) {
