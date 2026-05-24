@@ -22,9 +22,13 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
 
 ## GIF
 ![Para acessar o CRUD](/Front%20End/assets/GIF%20Config.gif)
+
 ![Swagger](/Front%20End/assets/GIF%20Swagger.gif)
+
 ![Filtragem](/Front%20End/assets/GIF%20Filtro.gif)
+
 ![Funções Principais](/Front%20End/assets/GIF%20Funções%20Principais.gif)
+
 ![Sobre as Taxa](/Front%20End/assets/GIF%20Taxa.gif)
 
 ## Preview
