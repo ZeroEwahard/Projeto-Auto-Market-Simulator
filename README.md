@@ -18,7 +18,7 @@ O **AutoMarket** é uma aplicação web para visualização, gerenciamento e sim
 - Contribuição
 
 ## 👓 Visão Geral
-O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, ficha técnica por veículo e um simulador de financiamento (método Price). O sistema utiliza PostgreSQL no back-end e uma UI em JavaScript no front-end.
+O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, ficha técnica por veículo e um simulador de financiamento (método Price). O sistema utiliza PostgreSQL no back-end e uma UI em JavaScript no front-end.
 
 ## 🎥 GIF
 <table>
