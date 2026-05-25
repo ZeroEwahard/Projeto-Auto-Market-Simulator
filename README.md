@@ -20,7 +20,7 @@ O **AutoMarket** é uma aplicação web para visualização, gerenciamento e sim
 ## Visão Geral
 O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, ficha técnica por veículo e um simulador de financiamento (método Price). O sistema utiliza PostgreSQL no back-end e uma UI em JavaScript no front-end.
 
-## GIF
+## 🎥 GIF
 ![Para acessar o CRUD](/Front%20End/assets/GIF%20Config.gif)
 
 ![Swagger](/Front%20End/assets/GIF%20Swagger.gif)
@@ -31,11 +31,18 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
 
 ![Sobre as Taxa](/Front%20End/assets/GIF%20Taxa.gif)
 
-## Preview
-![Swagger Img](/Front%20End/assets/Swagger.png)
+## 📸 Preview
+
+<div align="center">
+img src="/Front%20End/assets/Swagger" width="800px" 
+style="border-radius:10px;">
+</div>
 ![Filtros](/Front%20End/assets/Filtros.png)
+
 ![Ficha Técnica](/Front%20End/assets/Ficha-Técnica.png)
+
 ![Simulador de Compra](/Front%20End/assets/Simulador.png)
+
 ![Taxa](/Front%20End/assets/Taxa.png)
 
 ## 🚀 Funcionalidades
