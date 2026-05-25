@@ -66,7 +66,7 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
 <img src="/Front%20End/assets/Ficha-Técnica.png"/>
 </td>
 
-<td>
+<tr>
 <img src="/Front%20End/assets/Simulador.png"/>
 </td>
 </tr>
