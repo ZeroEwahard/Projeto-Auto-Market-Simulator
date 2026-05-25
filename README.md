@@ -17,7 +17,7 @@ O **AutoMarket** é uma aplicação web para visualização, gerenciamento e sim
 - Observações
 - Contribuição
 
-## Visão Geral
+## 👓 Visão Geral
 O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, ficha técnica por veículo e um simulador de financiamento (método Price). O sistema utiliza PostgreSQL no back-end e uma UI em JavaScript no front-end.
 
 ## 🎥 GIF
@@ -142,7 +142,7 @@ AutoMarket/
 │   └── index.html
 ```
 
-## Como rodar - Back End
+## ▶️ Como rodar - Back End
 Pré-requisitos: JDK 21 instalado e um banco PostgreSQL.
 ### Configurar variáveis de ambiente (exemplo PowerShell):
 ```
@@ -170,7 +170,7 @@ Pontos úteis:
 - Swagger UI: http://localhost:8080/swagger-ui
 - OpenAPI: http://localhost:8080/v3/api-docs
 
-## Como rodar - Front End
+## ▶️ Como rodar - Front End
 O front-end é servido como arquivos estáticos (HTML/CSS/JS) - ou seja, o serivdor entrega os artefatos prontos sem gerar HTML no servidor a cada requisição. Porém, o comportamento da interface é dinâmico: o JavaScript no cliente consome a API do back-end (variável `API_URL` em Front End/script/main/config.js) e gera/atualiza o conteúdo no navegador (Client-Side Rendering - CSR). Em resumo: arquivos estáticos + renderização dinâmica no cliente via API.
 
 Para desenvolvimento abra `Front End/index.html` no navegador ou sirva a pasta com um servidor estático:
@@ -182,13 +182,13 @@ python -m http.server 5500
 ```
 O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrão `http://localhost:8080`). Atualize quando o back-end estiver em outro host/porta.
 
-## Configurações e variáveis de ambiente
+## ⚙️ Configurações e variáveis de ambiente
 * `DB_HOST` (opcional): host e porta do PostgreSQL (padrão: `localhost:5432`).
 * `DB_USER`: usuário do banco.
 * `DB_PASSWORD`: senha do banco.
 * `Back End/src/main/resources/application.properties` contém configurações adicionais (como `carros.max` e `simulador.taxa-juros`).
 
-## Endpoints Principais:
+## 💡 Endpoints Principais:
 - `POST /carros` - cadastra um novo carro. Exemplo:
 ```json
 {
@@ -220,10 +220,10 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
 ![Spring](https://img.shields.io/badge/Spring_Boot-4-green)
 ![PostgreSQL](https://img.shields.io/badge/PostgreSQL-blue)
 
-## Observações
+## 👁️‍🗨️ Observações
 - O `pom.xml` define `java.version=21`.
 - `spring.jpa.hibernate.ddl-auto=update` cria/atualiza as tabelas automaticamente em desenvolvimento.
 - Propriedades úteis: `carros.max` (limite de cadastro) e `simulador.taxa-juros`.
 
-## Contribuição
+## 🤝 Contribuição
 Abra issues ou envie pull requests com melhorias e correções.
