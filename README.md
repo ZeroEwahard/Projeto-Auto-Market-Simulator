@@ -37,16 +37,16 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
  <img src="/Front%20End/assets/Swagger.png" width="400px" style="border-radius:10px;"/>
  <br></br>
 
- <img src="/Front%20End/assets/Filtros.png" width="400px"/>
+ <img src="/Front%20End/assets/Filtros.png" width="650px"/>
  <br></br>
 
- <img src="/Front%20End/assets/Ficha-Técnica.png" width="400px"/>
+ <img src="/Front%20End/assets/Ficha-Técnica.png" width="650px"/>
  <br></br>
 
- <img src="/Front%20End/assets/Simulador.png" width="400px"/>
+ <img src="/Front%20End/assets/Simulador.png" width="650px"/>
  <br></br>
 
- <img src="/Front%20End/assets/Taxa.png" width="400px"/>
+ <img src="/Front%20End/assets/Taxa.png" width="650px"/>
 </div>
 ## 🚀 Funcionalidades
 
