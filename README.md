@@ -34,7 +34,7 @@ O objetivo do AutoMarket é fornecer um catálago de veículos com filtros, fich
 ## 📸 Preview
 
 <div align="center">
-img src="/Front%20End/assets/Swagger.png" width="800px" 
+img src="/Front End/assets/Swagger.png" width="800px" 
 style="border-radius:10px;"/>
 </div>
 
