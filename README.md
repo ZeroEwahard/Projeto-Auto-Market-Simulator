@@ -22,55 +22,56 @@ O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, fich
 
 ## 🎥 GIF
 <table>
-<tr>
-<td>
-<img src="/Front%20End/assets/GIF%20Config.gif"/>
-</td>
+ <tr>
+  <td>
+   <img src="/Front%20End/assets/GIF%20Config.gif"/>
+  </td>
 
-<td>
-<img src="/Front%20End/assets/GIF%20Swagger.gif"/>
-</td>
-</tr>
+  <td>
+   <img src="/Front%20End/assets/GIF%20Swagger.gif"/>
+  </td>
+ </tr>
 
-<tr>
-<td>
-<img src="/Front%20End/assets/GIF%20Filtro.gif"/>
-</td>
+ <tr>
+  <td>
+   <img src="/Front%20End/assets/GIF%20Filtro.gif"/>
+  </td>
  
-<td>
-<img src="/Front%20End/assets/GIF%20Funções%20Principais.gif"/>
-</td>
-</tr>
+  <td>
+   <img src="/Front%20End/assets/GIF%20Funções%20Principais.gif"/>
+  </td>
+ </tr>
 
-<tr>
-<td colspan="2" align="center">
-<img src="/Front%20End/assets/GIF%20Taxa.gif"/>
-</td>
-</tr>
+ <tr>
+  <td colspan="2" align="center">
+   <img src="/Front%20End/assets/GIF%20Taxa.gif"/>
+  </td>
+ </tr>
+
 </table>
 
 ## 📸 Preview
 
 <table>
-<tr>
-<td>
-<img src="/Front%20End/assets/Swagger.png"/>
-</td>
+ <tr>
+  <td>
+   <img src="/Front%20End/assets/Swagger.png"/>
+  </td>
 
-<td>
-<img src="/Front%20End/assets/Filtros.png"/>
-</td>
-</tr>
+  <td>
+   <img src="/Front%20End/assets/Filtros.png"/>
+  </td>
+ </tr>
 
-<tr>
-<td>
-<img src="/Front%20End/assets/Ficha-Técnica.png"/>
-</td>
+ <tr>
+  <td>
+   <img src="/Front%20End/assets/Ficha-Técnica.png"/>
+  </td>
 
-<td>
-<img src="/Front%20End/assets/Simulador.png"/>
-</td>
-</tr>
+  <td>
+   <img src="/Front%20End/assets/Simulador.png"/>
+  </td>
+ </tr>
 </table>
 
 ## 🚀 Funcionalidades
@@ -192,33 +193,66 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
 - `POST /carros` - cadastra um novo carro. Exemplo:
 ```json
 {
-"marca": "Fiat",
-"modelo": "Uno",
-"tipo": "Hatch",
-"ano": 2019,
-"preco": 45000.00,
-"condicao": "USADO",
-"imagem": "nome_da_imagem.jpg",
-"fichaTecnica": {
-  "km": 50000,
-  "combustivel": "Flex",
-  "transmissao": "Manual",
-  "motor": "1.0",
-  "potencia": 75,
-  "torque": 9.0,
-  "consumo": 12.0
- }
+ "marca": "Fiat",
+ "modelo": "Uno",
+ "tipo": "Hatch",
+ "ano": 2019,
+ "preco": 45000.00,
+ "condicao": "Só é permitido nesse campo apenas: USADO ou NOVO",
+ "imagem": "nome_da_imagem.extensão do arquivo",
+ "fichaTecnica": {
+   "km": 50000,
+   "combustivel": "Flex",
+   "transmissao": "Manual",
+   "motor": "1.0",
+   "potencia": 75,
+   "torque": 9.0,
+   "consumo": 12.0
+  }
 }
 ```
 - `GET /carros` - lista de todos os carros
 - `PUT /carros/{id}` - atualiza um carro específico
+```json
+{
+  "marca": "string",
+  "modelo": "string",
+  "tipo": "string",
+  "ano": 0,
+  "preco": 0.00,
+  "condicao": "Só é permitido nesse campo apenas: USADO ou NOVO",
+  "imagem": "nome_da_imagem.extensão do arquivo",
+  "fichaTecnica": {
+    "km": 0,
+    "combustivel": "string",
+    "transmissao": "string",
+    "motor": "string",
+    "potencia": 0,
+    "torque": 0.1,
+    "consumo": 0.1
+  }
+}
+```
 - `PATCH /carros/{id}` - atualização parcial das informações de um carro específico
+```json
+{
+ "preco": 50000.00,
+ "imagem": "nome_da_imagem.extensão do arquivo",
+ "condicao": "Só é permitido nesse campo apenas: USADO ou NOVO",
+ "fiTecnica": {
+   "km": 0
+  }
+}
+```
 - `DELETE /carros/{id}` - remove um carro por ID
 - `POST /compras` - simula financiamento Exemplo:
-
-![Java](https://img.shields.io/badge/Java-21-orange)
-![Spring](https://img.shields.io/badge/Spring_Boot-4-green)
-![PostgreSQL](https://img.shields.io/badge/PostgreSQL-blue)
+```json
+{
+ "carroId": 1,
+ "entrada": 25000.00,
+ "parcelas": 60
+}
+```
 
 ## 👁️‍🗨️ Observações
 - O `pom.xml` define `java.version=21`.
