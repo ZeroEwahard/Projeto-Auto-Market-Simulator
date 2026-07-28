@@ -3,7 +3,7 @@
 O **AutoMarket** é uma aplicação web para visualização, gerenciamento e simulação de financiamento de veículos. O projeto contém um back-end em Java/Spring Boot e front-end em HTML/CSS/JavaScript/Bootstrap.
 
 ## 📄 Sumário
-- Visão geral
+- [Visão geral](#visão-geral)
 - GIF
 - Preview
 - Funcionalidades
@@ -15,7 +15,7 @@ O **AutoMarket** é uma aplicação web para visualização, gerenciamento e sim
 - Configurações e variáveis de ambiente
 - Endpoints Principais
 - Observações
-- Contribuição
+- [Contribuição](#contribuição)
 
 ## 👓 Visão Geral
 O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, ficha técnica por veículo e um simulador de financiamento (método Price). O sistema utiliza PostgreSQL no back-end e uma UI em JavaScript no front-end.
