@@ -3,23 +3,25 @@
 O **AutoMarket** é uma aplicação web para visualização, gerenciamento e simulação de financiamento de veículos. O projeto contém um back-end em Java/Spring Boot e front-end em HTML/CSS/JavaScript/Bootstrap.
 
 ## 📄 Sumário
-- [Visão geral](#visão-geral)
-- GIF
-- Preview
-- Funcionalidades
-- Tecnologias
-- Destaques Técnicos 
-- Estrutura Principal
-- Como rodar (Back End)
-- Como rodar (Front End)
-- Configurações e variáveis de ambiente
-- Endpoints Principais
-- Observações
-- [Contribuição](#contribuição)
+- [Visão geral](#visao-geral)
+- [GIF](#gif)
+- [Preview](#preview)
+- [Funcionalidades](#funcionalidades)
+- [Tecnologias](#tecnologias)
+- [Destaques Técnicos](#destaque-tecnicos)
+- [Estrutura Principal](#estrutura-principal)
+- [Como rodar (Back End)](#cr-backend)
+- [Como rodar (Front End)](#cr-frontend)
+- [Configurações e variáveis de ambiente](#variaveis-ambiente)
+- [Endpoints Principais](#endpoints)
+- [Observações](#observacoes)
+- [Contribuição](#contribuicao)
 
-## 👓 Visão Geral
+<a id="visao-geral"></a>
+## 👓 Visão Geral 
 O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, ficha técnica por veículo e um simulador de financiamento (método Price). O sistema utiliza PostgreSQL no back-end e uma UI em JavaScript no front-end.
 
+<a id="gif"></a>
 ## 🎥 GIF
 <table>
  <tr>
@@ -50,8 +52,8 @@ O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, fich
 
 </table>
 
+<a id="preview"></a>
 ## 📸 Preview
-
 <table>
  <tr>
   <td>
@@ -74,6 +76,7 @@ O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, fich
  </tr>
 </table>
 
+<a id="funcionalidades"></a>
 ## 🚀 Funcionalidades
 
 ### 🛒 Catálogo
@@ -101,6 +104,7 @@ O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, fich
 - Integração com Swagger
 - Cadastro, edição e remoção de veículos
 
+<a id="tecnologias"></a>
 ## 🛠️ Tecnologia
 **Front-End:**
 * HTML
@@ -115,6 +119,7 @@ O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, fich
 * PostgreSQL (Armazenamento e persistência dos dados)
 * Swagger (Documentação da API e interface do CRUD)
 
+<a id="destaque-tecnicos"></a>
 ## 🧠 Destaques Técnicos
 - Arquitetura REST
 - Consumo de API via Fetch API
@@ -123,6 +128,7 @@ O objetivo do AutoMarket é fornecer um catálogo de veículos com filtros, fich
 - Simulação financeira usando Tabela Price
 - CRUD documentando com Swagger
 
+<a id="estrutura-principal"></a>
 ## 📁 Estrutura Principal
 ```bash
 AutoMarket/
@@ -143,6 +149,7 @@ AutoMarket/
 │   └── index.html
 ```
 
+<a id="cr-backend"></a>
 ## ▶️ Como rodar - Back End
 Pré-requisitos: JDK 21 instalado e um banco PostgreSQL.
 ### Configurar variáveis de ambiente (exemplo PowerShell):
@@ -171,6 +178,7 @@ Pontos úteis:
 - Swagger UI: http://localhost:8080/swagger-ui
 - OpenAPI: http://localhost:8080/v3/api-docs
 
+<a id="cr-frontend"></a>
 ## ▶️ Como rodar - Front End
 O front-end é servido como arquivos estáticos (HTML/CSS/JS) - ou seja, o serivdor entrega os artefatos prontos sem gerar HTML no servidor a cada requisição. Porém, o comportamento da interface é dinâmico: o JavaScript no cliente consome a API do back-end (variável `API_URL` em Front End/script/main/config.js) e gera/atualiza o conteúdo no navegador (Client-Side Rendering - CSR). Em resumo: arquivos estáticos + renderização dinâmica no cliente via API.
 
@@ -183,12 +191,14 @@ python -m http.server 5500
 ```
 O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrão `http://localhost:8080`). Atualize quando o back-end estiver em outro host/porta.
 
+<a id="variaveis-ambiente"></a>
 ## ⚙️ Configurações e variáveis de ambiente
 * `DB_HOST` (opcional): host e porta do PostgreSQL (padrão: `localhost:5432`).
 * `DB_USER`: usuário do banco.
 * `DB_PASSWORD`: senha do banco.
 * `Back End/src/main/resources/application.properties` contém configurações adicionais (como `carros.max` e `simulador.taxa-juros`).
 
+<a id="endpoints"></a>
 ## 💡 Endpoints Principais:
 - `POST /carros` - cadastra um novo carro. Exemplo:
 ```json
@@ -253,11 +263,12 @@ O arquivo `Front End/script/main/config.js` define a variável `API_URL` (padrã
  "parcelas": 60
 }
 ```
-
+<a id="observacoes"></a>
 ## 👁️‍🗨️ Observações
 - O `pom.xml` define `java.version=21`.
 - `spring.jpa.hibernate.ddl-auto=update` cria/atualiza as tabelas automaticamente em desenvolvimento.
 - Propriedades úteis: `carros.max` (limite de cadastro) e `simulador.taxa-juros`.
 
+<a id="contribuicao"></a>
 ## 🤝 Contribuição
 Abra issues ou envie pull requests com melhorias e correções.
